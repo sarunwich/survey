@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.frontendlayout')
   
 @section('content')
 <div class="container">
@@ -13,8 +13,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-  
-                    You are a User.
+                    <div class="container">
+                    {{QrCode::size(200)->generate('https://sci.tsu.ac.th');}}
+                    </div>
+                    <div class="codesource-link">
+                        <a href="https://sci.tsu.ac.th">https://sci.tsu.ac.th</a>
+                      </div>
+                    welcome.
                 </div>
             </div>
         </div>
